@@ -1,62 +1,68 @@
-* {
+:root {
+  --dark-bg: #050510;
+  --light-bg: #f4f4f4;
+  --neon: #00f6ff;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: system-ui, sans-serif;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: var(--dark-bg);
+  color: white;
+}
+
+body.light {
+  background: var(--light-bg);
+  color: black;
 }
 
 canvas {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
 }
 
-body {
-  color: white;
-  background: black;
+#themeToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.content {
+.hero {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
-.content h1 {
+h1 {
   font-size: 3rem;
-}
-
-.buttons a {
-  margin: 10px;
-  padding: 12px 20px;
-  border: 1px solid white;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-
-.buttons a:hover {
-  background: white;
-  color: black;
+  text-shadow: 0 0 20px var(--neon);
 }
 
 section {
   padding: 80px 10%;
+  max-width: 900px;
+  margin: auto;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.btn {
+  padding: 12px 20px;
+  border: 1px solid currentColor;
+  text-decoration: none;
 }
 
-.card {
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
+/* Mobile */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  section { padding: 60px 5%; }
 }
