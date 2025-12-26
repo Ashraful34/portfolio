@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ashraful Haque | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Ashraful Haque | 3D Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="dark">
+<button id="themeToggle">🌙</button>
 
 <canvas id="bg"></canvas>
 
-<section class="content">
-  <h1>👋 I'm Ashraful Haque</h1>
-  <p>Web Designer | Frontend Developer | Instructor</p>
+<header class="hero">
+  <h1>Ashraful Haque</h1>
+  <p>Frontend Developer • Web Designer • Instructor</p>
+</header>
 
-  <div class="buttons">
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+<section id="experience">
+  <h2>Experience</h2>
+  <p><strong>Web Design Instructor</strong> — 1 Hour Study (Online)</p>
+  <p>District Ambassador • Taught via Zoom</p>
 </section>
 
 <section id="projects">
-  <h2>🚀 Projects</h2>
-  <div class="cards">
-    <div class="card">Portfolio Website</div>
-    <div class="card">Landing Page Design</div>
-    <div class="card">WordPress Website</div>
-  </div>
+  <h2>Projects</h2>
+  <ul>
+    <li>3D Portfolio Website</li>
+    <li>Business Landing Pages</li>
+    <li>WordPress Sites</li>
+  </ul>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <a href="resume.pdf" class="btn">Download Resume</a>
 </section>
 
 <section id="contact">
-  <h2>📩 Contact</h2>
+  <h2>Contact</h2>
   <p>Email: your@email.com</p>
   <p>GitHub: github.com/yourusername</p>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
+
